@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GRR Nanny</string>
+    <string name="shared_user">grr_shared_user</string>
+    <string name="shared_timestamp_file">timestamp</string>
+    <string name="client_package_name">com.nexuslab.forensics.grr.mobile</string>
+    <string name="client_intent_action">com.nexuslab.forensics.grr.intent.action.START_MAIN_ACTIVITY_CLIENT</string>
+</resources>
