@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GRR Rapid Response</string>
+    <string name="shared_user">grr_shared_user</string>
+    <string name="shared_timestamp_file">timestamp</string>
+    <string name="nanny_package_name">com.nexuslab.forensics.grr.nanny</string>
+    <string name="nanny_intent_action">com.nexuslab.forensics.grr.intent.action.START_MAIN_ACTIVITY_NANNY</string>
+</resources>

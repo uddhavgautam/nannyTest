@@ -1,1 +1,1 @@
-include ':nanny'
+include ':nanny', ':mobile'

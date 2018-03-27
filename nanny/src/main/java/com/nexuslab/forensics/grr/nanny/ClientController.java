@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import lombok.extern.java.Log;
 
 /**
@@ -21,6 +23,9 @@ class ClientController extends Thread {
     private final String targetIntentAction;
     private Context context;
     private Context targetContext;
+
+    @Inject
+    NannyApplication nannyApplication;
 
     ClientController(HeartbeatService service) throws PackageManager.NameNotFoundException {
         context = service;
