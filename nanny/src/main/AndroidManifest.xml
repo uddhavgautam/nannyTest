@@ -41,6 +41,7 @@
             </intent-filter>
         </receiver>
 
+        <!--always singleInstance of service-->
         <service
             android:name="com.nexuslab.forensics.grr.nanny.HeartbeatService"
             android:enabled="true"

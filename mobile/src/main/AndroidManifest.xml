@@ -32,6 +32,9 @@
 
         </activity>
 
+        <!--Always singleInstance of service.
+        Both services should run under the same process so that we can track the process by
+        HeartbeatService.-->
         <service
             android:name="com.nexuslab.forensics.grr.mobile.GrrService"
             android:enabled="true" />
