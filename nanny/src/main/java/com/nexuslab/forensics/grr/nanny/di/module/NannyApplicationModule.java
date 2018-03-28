@@ -6,25 +6,15 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import dagger.android.AndroidInjectionModule;
 
-/**
- * Created by gaute on 3/25/18.
- */
-
-@Module
+@Module(includes = AndroidInjectionModule.class)
 public class NannyApplicationModule {
 
-    private final NannyApplication nannyApplication;
-
-    public NannyApplicationModule(NannyApplication nannyApplication) {
-        this.nannyApplication = nannyApplication;
-    }
-
-    @Singleton
     @Provides
-    public NannyApplication provideNannyApplication() {
-        return this.nannyApplication;
+    @Singleton
+    NannyApplication getNannyApplication(NannyApplication nannyApplication) {
+        return nannyApplication;
     }
+
 }
-
-

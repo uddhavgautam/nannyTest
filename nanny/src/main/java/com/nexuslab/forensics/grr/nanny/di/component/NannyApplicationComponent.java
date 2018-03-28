@@ -3,12 +3,11 @@ package com.nexuslab.forensics.grr.nanny.di.component;
 
 import com.nexuslab.forensics.grr.nanny.NannyApplication;
 import com.nexuslab.forensics.grr.nanny.di.module.NannyApplicationModule;
-import com.nexuslab.forensics.grr.nanny.di.scope.ApplicationScope;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
-import dagger.android.AndroidInjectionModule;
+import dagger.android.AndroidInjector;
 
 /**
  * Created by gaute on 3/25/18.
@@ -29,17 +28,11 @@ import dagger.android.AndroidInjectionModule;
  * SomeType injectAndReturnSomeType(SomeType someType);
  */
 
-@ApplicationScope
 @Singleton
-@Component(modules = {NannyApplicationModule.class, AndroidInjectionModule.class})
-public interface NannyApplicationComponent {
+@Component(modules = NannyApplicationModule.class)
+public interface NannyApplicationComponent extends AndroidInjector<NannyApplication> {
 
-    /**
-     * It injects NannyApplication object into the generated framework of graph
-     *
-     * @param nannyApplication
-     */
-    void inject(NannyApplication nannyApplication);
-
-
+    @Component.Builder
+    abstract class Builder extends AndroidInjector.Builder<NannyApplication> {
+    }
 }
